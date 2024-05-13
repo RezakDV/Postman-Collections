@@ -9,6 +9,38 @@
 	"item": [
 		{
 			"name": "RP-1 Success registation",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.sendRequest({\r",
+							"    url: \"http://users.bugred.ru/tasks/rest/deleteuser\",\r",
+							"    method: \"DELETE\",\r",
+							"    header: {\r",
+							"        \"Content-Type\": \"application/json\"\r",
+							"    },\r",
+							"    body: {\r",
+							"        mode: \"raw\",\r",
+							"        raw: JSON.stringify({\r",
+							"            name: \"Denis Reznichenko\",\r",
+							"            email: \"rezakboy@yandex.ru\",\r",
+							"            password: \"Test2024\"\r",
+							"        })\r",
+							"    }\r",
+							"}, function (err, res) {\r",
+							"    if (err) {\r",
+							"        console.error(err);\r",
+							"    } else {\r",
+							"        console.log(res);\r",
+							"    }\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -101,7 +133,7 @@
 			"response": []
 		},
 		{
-			"name": "RP-4 Invalid password",
+			"name": "RP-4 Invalid email",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -133,6 +165,48 @@
 		},
 		{
 			"name": "RP-5 Invalid password (Empty)",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.sendRequest({\r",
+							"    url: \"http://users.bugred.ru/tasks/rest/deleteuser\",\r",
+							"    method: \"DELETE\",\r",
+							"    header: {\r",
+							"        \"Content-Type\": \"application/json\"\r",
+							"    },\r",
+							"    body: {\r",
+							"        mode: \"raw\",\r",
+							"        raw: JSON.stringify({\r",
+							"            name: \"Denis Reznichenko\",\r",
+							"            email: \"rezakboy@yandex.ru\",\r",
+							"            password: \"Test2024\"\r",
+							"        })\r",
+							"    }\r",
+							"}, function (err, res) {\r",
+							"    if (err) {\r",
+							"        console.error(err);\r",
+							"    } else {\r",
+							"        console.log(res);\r",
+							"    }\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -164,6 +238,38 @@
 		},
 		{
 			"name": "RP-6 Invalid password (150 characters)",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.sendRequest({\r",
+							"    url: \"http://users.bugred.ru/tasks/rest/deleteuser\",\r",
+							"    method: \"DELETE\",\r",
+							"    header: {\r",
+							"        \"Content-Type\": \"application/json\"\r",
+							"    },\r",
+							"    body: {\r",
+							"        mode: \"raw\",\r",
+							"        raw: JSON.stringify({\r",
+							"            name: \"Denis Reznichenko\",\r",
+							"            email: \"rezakboy@yandex.ru\",\r",
+							"            password: \"Test2024\"\r",
+							"        })\r",
+							"    }\r",
+							"}, function (err, res) {\r",
+							"    if (err) {\r",
+							"        console.error(err);\r",
+							"    } else {\r",
+							"        console.log(res);\r",
+							"    }\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -195,6 +301,38 @@
 		},
 		{
 			"name": "RP-7 Invalid user's name (special symbols)",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.sendRequest({\r",
+							"    url: \"http://users.bugred.ru/tasks/rest/deleteuser\",\r",
+							"    method: \"DELETE\",\r",
+							"    header: {\r",
+							"        \"Content-Type\": \"application/json\"\r",
+							"    },\r",
+							"    body: {\r",
+							"        mode: \"raw\",\r",
+							"        raw: JSON.stringify({\r",
+							"            name: \"Denis Reznichenko\",\r",
+							"            email: \"rezakboy@yandex.ru\",\r",
+							"            password: \"Test2024\"\r",
+							"        })\r",
+							"    }\r",
+							"}, function (err, res) {\r",
+							"    if (err) {\r",
+							"        console.error(err);\r",
+							"    } else {\r",
+							"        console.log(res);\r",
+							"    }\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -226,6 +364,38 @@
 		},
 		{
 			"name": "RP-8 Invalid user's name (numbers)",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.sendRequest({\r",
+							"    url: \"http://users.bugred.ru/tasks/rest/deleteuser\",\r",
+							"    method: \"DELETE\",\r",
+							"    header: {\r",
+							"        \"Content-Type\": \"application/json\"\r",
+							"    },\r",
+							"    body: {\r",
+							"        mode: \"raw\",\r",
+							"        raw: JSON.stringify({\r",
+							"            name: \"Denis Reznichenko\",\r",
+							"            email: \"rezakboy@yandex.ru\",\r",
+							"            password: \"Test2024\"\r",
+							"        })\r",
+							"    }\r",
+							"}, function (err, res) {\r",
+							"    if (err) {\r",
+							"        console.error(err);\r",
+							"    } else {\r",
+							"        console.log(res);\r",
+							"    }\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -288,6 +458,48 @@
 		},
 		{
 			"name": "RP-10 Login",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.sendRequest({\r",
+							"    url: \"http://users.bugred.ru/tasks/rest/doregister\",\r",
+							"    method: \"POST\",\r",
+							"    header: {\r",
+							"        \"Content-Type\": \"application/json\"\r",
+							"    },\r",
+							"    body: {\r",
+							"        mode: \"raw\",\r",
+							"        raw: JSON.stringify({\r",
+							"            name: \"Denis Reznichenko\",\r",
+							"            email: \"rezakboy@yandex.ru\",\r",
+							"            password: \"Test2024\"\r",
+							"        })\r",
+							"    }\r",
+							"}, function (err, res) {\r",
+							"    if (err) {\r",
+							"        console.error(err);\r",
+							"    } else {\r",
+							"        console.log(res);\r",
+							"    }\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
 			"request": {
 				"method": "POST",
 				"header": [],
